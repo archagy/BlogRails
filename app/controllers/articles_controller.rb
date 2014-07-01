@@ -67,7 +67,7 @@ class ArticlesController < ApplicationController
       @article = Article.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through
+    # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:title, :location, :excerpt, :body, :published_at,
       :category_ids => [] )
